@@ -49,12 +49,10 @@ def keypair_gen(x,y):
 	seed=datetime.datetime.now()
 	seed=int(seed.microsecond)
 	random.seed(seed)
-	print seed
 	
 	e= random.randrange(1,p)
 	while fractions.gcd(e,p)!= 1 and fractions.gcd(e,n)!=1:
 		e=random.randrange(1,p)
-	
 	
 	d=modInv(e,p)
 	while(d==e):
