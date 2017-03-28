@@ -51,7 +51,7 @@ def keypair_gen(x,y):
 	print seed
 	
 	e= random.randrange(1,p)
-	while fractions.gcd(e,p)!= 1 and fractions.gcd(e,n):
+	while fractions.gcd(e,p)!= 1 and fractions.gcd(e,n)!=1:
 		e=random.randrange(1,p)
 	
 	
