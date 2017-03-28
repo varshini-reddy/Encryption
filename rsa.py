@@ -43,6 +43,7 @@ def modInv(a,m) :
 
 def keypair_gen(x,y):
 	n=x*y
+	#lcm is optional, the value of p can taken as be p=(x-1)*(y-1)
 	p=lcm(x-1, y-1)
 	
 	seed=datetime.datetime.now()
