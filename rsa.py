@@ -88,7 +88,7 @@ while y1!=True or y==x:
 	if y1!=True:
 		print "Not a prime"
 	else:
-		print "Values have be equal"	
+		print "Values should not be equal"	
 	y=input("Retry with new value: ")
 	y1=check_prime(y)
 
