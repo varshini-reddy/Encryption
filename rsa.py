@@ -98,13 +98,13 @@ plain=raw_input("Enter the plain text: ")
 key=keypair_gen(x,y)
 public_key=(key[0], key[2])
 private_key=(key[1],key[2])
-print "Public key is: ",public_key,"Private key is: ", private_key
+print "Public key is: ",public_key,"\nPrivate key is: ", private_key
 
 cipher=encrypt(public_key, plain)
 print "Encrypted text is: "
 print ''.join(map(lambda x: str(x), cipher))
 
-print "\n\n", "Text after decryption: "
+print "\nText after decryption: "
 print decrypt(private_key, cipher)
 
 
