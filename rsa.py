@@ -92,8 +92,7 @@ while y1!=True or y==x:
 	y=input("Retry with new value: ")
 	y1=check_prime(y)
 
-r1=datetime.datetime.now()
-r1=r1.second
+
 #Key pair generation
 plain=raw_input("Enter the plain text: ")
 key=keypair_gen(x,y)
@@ -107,8 +106,7 @@ print ''.join(map(lambda x: str(x), cipher))
 
 print "\n\n", "Text after decryption: "
 print decrypt(private_key, str(cipher))
-r2=datetime.datetime.now()
-r2=r2.second
+
 
 
 
