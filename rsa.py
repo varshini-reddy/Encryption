@@ -44,19 +44,19 @@ def modInv(a,m) :
 def keypair_gen(x,y):
 	n=x*y
 	#lcm is optional, the value of p can taken as be p=(x-1)*(y-1)
-	p=lcm(x-1, y-1)
+	phi=lcm(x-1, y-1)
 	
 	seed=datetime.datetime.now()
 	seed=int(seed.microsecond)
 	random.seed(seed)
 	
-	e= random.randrange(1,p)
-	while fractions.gcd(e,p)!= 1 and fractions.gcd(e,n)!=1:
-		e=random.randrange(1,p)
+	e= random.randrange(1,phi)
+	while fractions.gcd(e,phi)!= 1 and fractions.gcd(e,n)!=1:
+		e=random.randrange(1,phi)
 	
-	d=modInv(e,p)
+	d=modInv(e,phi)
 	while(d==e):
-		d=modInv(e,p)
+		d=modInv(e,phi)
 	
 	tup=(e,d,n)
 	
