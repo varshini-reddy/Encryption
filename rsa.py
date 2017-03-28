@@ -65,12 +65,12 @@ def keypair_gen(x,y):
 
 def encrypt(pkey,plain_text):
 	key,n=pkey
-	cipher=[pow(ord(char),key,n) for char in plain_text]
+	cipher=[pow(ord(x),key,n) for x in plain_text]
 	return cipher
 
 def decrypt(pkey, cipher_text):
 	key,n=pkey
-	plain = [chr((char ** key) % n) for char in cipher]
+	plain = [chr((x ** key) % n) for x in cipher]
 	return ''.join(plain)
 
 
@@ -105,7 +105,7 @@ print "Encrypted text is: "
 print ''.join(map(lambda x: str(x), cipher))
 
 print "\n\n", "Text after decryption: "
-print decrypt(private_key, str(cipher))
+print decrypt(private_key, cipher)
 
 
 
